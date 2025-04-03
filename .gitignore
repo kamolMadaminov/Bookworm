@@ -1,0 +1,43 @@
+# Build generated files
+DerivedData/
+build/
+*.xcworkspace
+*.xcuserstate
+*.xcuserdatad
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+
+# User-specific files
+*.swp
+*.swo
+*.log
+*.DS_Store
+.idea/
+
+# Swift Package Manager
+/.build/
+/Package.resolved
+
+# Carthage
+Carthage/Build/
+
+# CocoaPods
+Pods/
+
+# Xcode-specific files
+*.hmap
+*.ipa
+*.dSYM
+
+# Archives
+*.xcarchive
+
+# Simulator
+*.app
+*.app.dSYM
+
+# Test coverage
+.coverage
+
+# Other
+*.orig
