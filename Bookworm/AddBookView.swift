@@ -14,7 +14,7 @@ struct AddBookView: View {
     @State private var title = ""
     @State private var author = ""
     @State private var rating = 3
-    @State private var genre = "Fantasy"
+    @State private var genre = ""
     @State private var review = ""
     
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
@@ -46,10 +46,15 @@ struct AddBookView: View {
                         modelContext.insert(newBook)
                         dismiss()
                     }
+                    .disabled(!isValidData())
                 }
             }
             .navigationTitle("Add Book")
         }
+    }
+    
+    func isValidData() -> Bool {
+        title.count > 2 && author.count > 2 && !genre.isEmpty
     }
 }
 
